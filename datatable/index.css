@@ -1,0 +1,174 @@
+.cp-filter-criteria {
+    display: none;
+    padding-bottom: 10px;
+}
+
+.cp-filter-criteria .filter-criteria {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: inline-block;
+    height: 3em;
+    padding: 5px;
+    margin-right: 5px;
+}
+
+.cp-filter-criteria .filter-criteria:last-child {
+    margin: 0;
+}
+
+.cp-filter-criteria .filter-criteria .field-name {
+    float: left;
+    font-size: .8em;
+}
+
+.cp-filter-criteria .filter-criteria .field-value {
+    float: left;
+    font-size: .9em;
+    margin-top: -10px;
+    width: 100%;
+}
+
+.cp-filter-criteria .filter-criteria .close {
+    opacity: 1;
+    position: relative;
+    top: 6px;
+}
+
+.cp-datatable-filter {
+    float: right;
+}
+
+.cp-datatable-filter .form-group {
+    float: left;
+    padding-left: 5px;
+}
+
+.cp-datatable .cp-header {
+    margin-bottom: 10px;
+}
+
+.cp-datatable .sorting_1 {
+    background-color: transparent;
+}
+
+.cp-datatable .dataTables_paginate .paginate_button {
+    display: inline;
+    border: medium none !important;
+    display: inline;
+    padding: 0;
+    margin: 0;
+}
+
+.cp-datatable .dataTables_wrapper .cp-table-controls-container {
+    margin-bottom: 10px;
+}
+
+.cp-datatable .dataTable th {
+    background-color: #F6F6F6;
+    border-top: 1px solid #a6aaa9;
+    border-bottom: 1px solid #a6aaa9;
+    padding: 10px 10px;
+}
+
+.cp-datatable .dataTable tbody tr td {
+    border-top: none;
+    border-bottom: 1px solid #a6aaa9;
+}
+
+.cp-datatable .dataTable tbody tr td a {
+    text-decoration: underline;
+}
+
+.cp-datatable .dataTable.no-footer {
+    border-bottom: none;
+}
+
+.cp-datatable .dataTable thead .sorting_asc, .cp-datatable .dataTable thead .sorting_desc, .cp-datatable .dataTable thead .sorting {
+    background-image: none;
+}
+
+.cp-datatable .dataTable thead .sorting_asc::after, .cp-datatable .dataTable thead .sorting::after, .cp-datatable .dataTable thead .sorting_desc::after {
+    position: static;
+    right: 6px;
+    text-align: center;
+    display: inline-block;
+    font-family: Ionicons;
+    margin-left: 10px;
+    width: 1em;
+    font-size: 10px;
+    color: #000;
+    background-image: none;
+}
+
+.cp-datatable .dataTable thead .sorting_asc::after {
+    content: "\f104";
+}
+
+.cp-datatable .dataTable thead .sorting::after {
+    content: "\f107\f10a";
+    letter-spacing: 2px;
+    opacity: 0.5;
+    width: 2em;
+    -ms-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.cp-datatable .dataTable thead .sorting_desc::after {
+    content: "\f10d";
+}
+
+.cp-datatable .dataTable table.dataTable.display tbody tr:hover > .sorting_1,
+.cp-datatable .dataTable table.dataTable.order-column.hover tbody tr:hover > .sorting_1 {
+    background-color: #eaeaea;
+}
+
+.cp-datatable td a.edit i {
+    font-size: 33px;
+    line-height: 33px;
+    margin-left: 16px;
+    position: absolute;
+}
+
+@media (min-width: 480px) {
+    .form-inline .form-group {
+        display: inline-block;
+        margin-bottom: 0;
+        vertical-align: middle;
+    }
+}
+
+@media (min-width: 687px) {
+    #filterValue {
+        min-width: 250px;
+    }
+}
+
+#filter_entity_submit {
+    height: 34px;
+}
+
+table.dataTable.display tbody tr > .sorting_1 {
+    background-color: transparent;
+}
+
+table.dataTable.display tbody tr > .sorting_1:hover, table.dataTable.display tbody tr > .sorting_1.focus {
+    background-color: transparent;
+}
+
+table.dataTable.dtr-inline.collapsed > tbody > tr.parent > td:first-child:before, table.dataTable.dtr-inline.collapsed > tbody > tr.parent > th:first-child:before {
+    background-color: #5174B8;
+}
+
+table.dataTable.display tbody tr:hover > .sorting_1, table.dataTable.order-column.hover tbody tr:hover > .sorting_1 {
+    background-color: transparent;
+}
+
+table.dataTable.dtr-inline.collapsed > tbody > tr > td:first-child:before, table.dataTable.dtr-inline.collapsed > tbody > tr > th:first-child:before {
+    top: inherit !important;
+}
+
+body {
+    background-color: #eaeaea !important;
+}

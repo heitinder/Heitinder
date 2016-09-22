@@ -1,0 +1,111 @@
+
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1"><!--
+    <link rel="stylesheet" href="http://localhost:3000/vendor.bundle.css">
+    <link rel="stylesheet" href="http://localhost:3000/datatable-test.bundle.css">-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.6/cerulean/bootstrap.min.css">
+
+        <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.11/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="../dependancies/jquery.datatables.css">
+
+    <!--datepicker-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.js"></script>
+    <script src="https://cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/a549aa8780dbda16f6cff545aeabc3d71073911e/src/js/bootstrap-datetimepicker.js"></script>
+    <link rel="stylesheet" href="https://cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/a549aa8780dbda16f6cff545aeabc3d71073911e/build/css/bootstrap-datetimepicker.css">
+    <!--datepicker-->
+
+</head>
+
+<body>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">
+            </a>
+        </div>
+    </div>
+</nav>
+<div class="container-fluid">
+
+
+    <div class="cp-datatable">
+        <div class="row">
+            <div class="col-sm-12 cp-header">
+                <div class="pull-left">
+                    <a id="addcompany" href="/wds-web/rest/views/companies/create" class="btn btn-primary">Add Company</a>
+                </div>
+                <div class="pull-right">
+                    <form class="form-inline">
+                        <div class="form-group">
+
+                            <select id="search_filter" value="" class="form-control ">
+                                <option value="0">Name_test</option>
+                                <option value="1">Position</option>
+                                <option value="2">Office</option>
+                                <option value="3">Extn</option>
+                                <option value="4">Start date</option>
+                                <option value="5">Date</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <div class='input-group date' id='datepicker1'>
+                                <input type='text' class="form-control" placeholder="Start Date"/>
+                                    <span class="input-group-addon">
+                                        <span class="glyphicon glyphicon-calendar"></span>
+                                    </span>
+                            </div>
+                            <span id="dtRange" style="cursor: pointer;color:blue">Date Range</span>
+                            <div class='input-group date' id='datepicker2'>
+                                <input type='text' class="form-control" placeholder="End Date" placeholder="End Date"/>
+                                    <span class="input-group-addon">
+                                        <span class="glyphicon glyphicon-calendar"></span>
+                                    </span>
+                            </div>
+                            <input type="text" class="form-control" id="search_value" placeholder="Filter" name="search_companies">
+                        </div>
+
+                        <button id="submit_filter" class="btn btn-primary" aria-label="Filter">
+                            <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <table id="example" class="display responsive no-wrap dt-bootstrap" cellspacing="0"  width="100%">
+                    <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Position</th>
+                        <th>Office</th>
+                        <th>Extn.</th>
+                        <th>Start date</th>
+                        <th>Salary</th>
+                        <th>Action</th>
+                    </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+        </div>
+
+
+    </div><!-- /.container -->
+
+    <script src="http://localhost:3000/vendor.bundle.js"></script>
+    <script src="http://localhost:3000/datatable-test.bundle.js"></script>
+</body>
+</html>

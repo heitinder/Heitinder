@@ -1,0 +1,48 @@
+{{! the row containing the create new and the filter box}}
+<div class="row">
+    {{! Add entity link }}
+    <div class="col-ms-3">
+        {{#createLabel}}
+        <div class="form-group">
+            <a id="add_entity_link" href="{{createHref}}" class="btn btn-primary btn-full">{{createLabel}}</a>
+        </div>
+        {{/createLabel}}
+    </div>
+    {{! Filter entities link }}
+    <div class="col-ms-9">
+        <form class="form-inline text-right cp-datatable-filter">
+
+            {{#includeFilters}}
+            <div class="form-group">
+                <label class="sr-only" for="filter">Filter Field</label>
+                <select id="filter" name="filter" class="form-control">
+                    {{#filters}}
+                    <option value="{{value}}">{{name}}</option>
+                    {{/filters}}
+                </select>
+            </div>
+            {{/includeFilters}}
+
+            <div class="form-group">
+                <label class="sr-only" for="filterValue">Filter Value</label>
+                <input type="text" class="form-control required" maxlength="20" id="filterValue" placeholder="{{searchInputPlaceholder}}">
+            </div>
+
+            <div class="form-group">
+                <button id="filter_entity_submit" type="submit" class="btn btn-primary btn-full" disabled>
+                    <span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span>
+                </button>
+            </div>
+
+        </form>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12 cp-filter-criteria" id="cp-filter-criteria"></div>
+</div>
+{{! row containing the datatable component}}
+<div class="row">
+    <div class="col-ms-12 cp-datatable">
+        <table id="{{id}}" class="display responsive no-wrap dt-bootstrap" cellspacing="0" width="100%"></table>
+    </div>
+</div>

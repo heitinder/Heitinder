@@ -1,0 +1,15 @@
+{{#cols}}<div class="{{cols}}">{{/cols}}
+    <div class="form-group">
+        <label for="{{id}}" class="control-label{{^labelVisible}} invisible{{/labelVisible}}">{{label}}{{^required}}<small>(Optional)</small>{{/required}}</label>
+        {{#viewVisible}}
+        <div class="form-control-static{{^view}} hidden{{/view}}">
+            {{viewValue}}
+        </div>
+        {{/viewVisible}}
+        <select id="{{id}}" value="{{value}}" name="{{name}}" class="form-control{{#view}} hide{{/view}}"{{#readonly}} readonly disabled{{/readonly}} {{#required}} required{{/required}}>
+        {{#options}}
+        <option>{{.}}</option>
+        {{/options}}
+        </select>
+    </div>
+    {{#cols}}</div>{{/cols}}
